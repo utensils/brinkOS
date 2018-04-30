@@ -47,7 +47,7 @@ COPY ./docker-entrypoint.sh /build/docker-entrypoint.sh
 # Setup Environment variables.
 ENV GTK_THEME="brinkOS-Dark" \
     SHELL_THEME="brinkOS-Dark" \
-    ICON_THEME="brinkOS-Icons" \
+    ICON_THEME="brinkOS" \
     WALLPAPER="file:///usr/share/backgrounds/gnome/snow-white.jpg" \
     PACKAGE_PROXY=""
 
