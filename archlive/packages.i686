@@ -6,6 +6,9 @@ brinkOS-plymouth
 brinkOS-gdm-plymouth
 brinkOS-slack
 brinkOS-google-chrome
+brinkOS-plymouth-theme
+brinkOS-antigen
+brinkOS-liqidprompt
 
 go-ethereum
 solidity

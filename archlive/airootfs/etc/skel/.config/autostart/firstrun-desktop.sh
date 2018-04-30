@@ -1,8 +1,8 @@
 #! /bin/bash
 gsettings set org.gnome.settings-daemon.peripherals.touchpad tap-to-click true
-gsettings set org.cinnamon.desktop.interface gtk-theme "Arctic-brinkOS"
-gsettings set org.cinnamon.desktop.wm.preferences theme "Arctic-brinkOS"
-gsettings set org.cinnamon.theme name "Arctic-brinkOS"
+gsettings set org.cinnamon.desktop.interface gtk-theme "brinkOS-Dark"
+gsettings set org.cinnamon.desktop.wm.preferences theme "brinkOS-Dark"
+gsettings set org.cinnamon.theme name "brinkOS-Dark"
 gsettings set org.cinnamon.desktop.interface icon-theme "brinkOS-icons"
 gsettings set org.cinnamon.desktop.wm.preferences button-layout 'menu:minimize,maximize,close'
 gsettings set org.cinnamon.settings-daemon.plugins.xsettings overrides "{'Gtk/DecorationLayout': <':minimize,maximize,close'>}"
