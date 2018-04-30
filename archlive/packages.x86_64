@@ -8,7 +8,9 @@ brinkOS-slack
 brinkOS-google-chrome
 brinkOS-plymouth-theme
 brinkOS-antigen
-brinkOS-liqidprompt
+brinkOS-liquidprompt
+brinkOS-terminal
+brinkOS-code
 
 go-ethereum
 solidity
@@ -29,7 +31,6 @@ eog
 npm
 php
 tmux
-gvim
 jdk10-openjdk
 alsa-utils
 b43-fwcutter
@@ -48,10 +49,8 @@ dosfstools
 efitools
 fakeroot
 fuse-exfat
-gdm
 git
 gnome-screenshot
-gnome-terminal
 grub
 gucharmap
 gzip
