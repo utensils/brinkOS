@@ -6,6 +6,7 @@ script:
   - docker build -t jamesbrink/brinkos .
   - docker images
   - docker run -i -t --privileged -v `pwd`/iso:/iso --rm jamesbrink/brinkos
+  - sudo chmod -R 777 ./iso
   - mv ./iso/*.iso ./iso/release.iso
   - cd ./iso/ && split -n 2 release.iso --numeric-suffixes=1 ./brinkOS_$RELEASE_DATE.iso.part_ && rm release.iso
 deploy:
