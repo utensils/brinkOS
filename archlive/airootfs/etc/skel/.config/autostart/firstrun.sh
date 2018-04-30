@@ -5,7 +5,7 @@ then
 
 else
 
-echo 'source ~/.liquidprompt/liquidprompt' >> ~/.bashrc
+echo 'source /usr/bin/liquidprompt' >> ~/.bashrc
 touch ~/.firstrun.ran
 /etc/skel/.config/autostart/firstrun-desktop.sh
 rm ~/.local/share/applications/chrome-app-list.desktop

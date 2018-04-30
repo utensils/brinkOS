@@ -66,6 +66,7 @@ systemctl enable graphical.target
 
 # Enable open-vm-tools
 cat /proc/version > /etc/arch-release
+systemctl enable vboxservice.service
 systemctl enable vmtoolsd.service
 systemctl enable vmware-vmblock-fuse.service
 

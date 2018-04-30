@@ -11,7 +11,11 @@ brinkOS-antigen
 brinkOS-liquidprompt
 brinkOS-terminal
 brinkOS-code
+brinkOS-wire
 
+vlc
+virtualbox-guest-utils
+virtualbox-guest-modules-arch
 zsh
 go-ethereum
 solidity
