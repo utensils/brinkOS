@@ -1,0 +1,10 @@
+.vscode
+.DS_Store
+brinkOS/archlive/work
+brinkOS/work
+iso
+pkg
+src/*.tar.gz
+*.pkg.tar.xz
+*.tar.gz
+package-repo
