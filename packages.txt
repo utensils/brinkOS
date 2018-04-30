@@ -12,6 +12,7 @@ brinkOS-liquidprompt
 brinkOS-terminal
 brinkOS-code
 
+zsh
 go-ethereum
 solidity
 atom
