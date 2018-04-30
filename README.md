@@ -1,6 +1,6 @@
 # brinkOS
 
-[![Build Status](https://travis-ci.org/jamesbrink/brinkOS.svg?branch=master)](https://travis-ci.org/jamesbrink/brinkOS)
+[![Build Status](https://travis-ci.org/brinkOS/brinkOS-builder.svg?branch=master)](https://travis-ci.org/brinkOS/brinkOS-builder)
 
 ## About
 Arch based Linux distribution for Engineers
@@ -28,4 +28,3 @@ $ docker run -i -t --privileged -v `pwd`/iso:/iso --rm brinkos bash
 [root@dc1f5b1f676f /]# cd /build/archlive/
 [root@dc1f5b1f676f archlive]# ./build.sh -v
 ```
-
