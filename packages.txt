@@ -15,6 +15,7 @@ brinkOS-wire
 brinkOS-pamac
 brinkOS-vim-colors
 brinkOS-tag-ag
+brinkOS-nexus
 
 the_silver_searcher
 vlc
