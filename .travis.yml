@@ -9,7 +9,7 @@ script:
 - sudo chmod -R 777 ./iso
 - mv ./iso/*.iso ./iso/release.iso
 - cd ./iso/ && split -n 2 release.iso --numeric-suffixes=1 ./brinkOS_$RELEASE_DATE.iso.part_
-  && rm release.iso
+  && rm release.iso && cd ..
 - ls -lart ./iso/
 deploy:
   provider: releases
