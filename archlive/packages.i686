@@ -12,6 +12,7 @@ brinkOS-liquidprompt
 brinkOS-terminal
 brinkOS-code
 brinkOS-wire
+brinkOS-pamac
 
 vlc
 virtualbox-guest-utils

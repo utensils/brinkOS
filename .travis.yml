@@ -1,20 +1,21 @@
 language: bash
 services: docker
 before_deploy:
-  - export RELEASE_DATE=$(date +%Y.%m.%d)
+- export RELEASE_DATE=$(date +%Y.%m.%d)
 script:
-  - docker build -t jamesbrink/brinkos .
-  - docker images
-  - docker run -i -t --privileged -v `pwd`/iso:/iso --rm jamesbrink/brinkos
-  - sudo chmod -R 777 ./iso
-  - mv ./iso/*.iso ./iso/release.iso
-  - cd ./iso/ && split -n 2 release.iso --numeric-suffixes=1 ./brinkOS_$RELEASE_DATE.iso.part_ && rm release.iso
+- docker build -t jamesbrink/brinkos .
+- docker images
+- docker run -i -t --privileged -v `pwd`/iso:/iso --rm jamesbrink/brinkos
+- sudo chmod -R 777 ./iso
+- mv ./iso/*.iso ./iso/release.iso
+- cd ./iso/ && split -n 2 release.iso --numeric-suffixes=1 ./brinkOS_$RELEASE_DATE.iso.part_
+  && rm release.iso
 deploy:
   provider: releases
   prerelease: true
   name: brinksOS_$RELEASE_DATE
   api_key:
-    secure: y/w5UOKtM4NQQ/O53YO/uwiIlIHbRWstwg2lVmEaGTUfGC2u2AwldkjTgK3mPZt/BEBjhDgWPFsmg7eKiFsy8SS9k2exFyHOQG9Pb3Velbbrvxajold3dUA9cC03tMVrgBqeVBSkhWpU9nfjcUvKqGt4XsfspEsXcgRsOD1QYsdKyKIJY4pWgymljr1LUB190u39KoMiLZi7g1C9x+Xw5TmsoX1r9wsHZCSKhxRr+2BBi6Z753mOw02QQ4/UAjaCD7tD2pO3lQBL3tJcxZBQWUNg/gLm4PYqW96gnMY9LAHRpoI4kTbS9VUxtHPUsxLUjkE1vKj/a+nEPRTX6xv9+aqinHJBMNeW6gon7+7AmezTAb+3ieYoJqaXFXkeUsLf4SQKYmOV6njsWtCGmkBlYvTy4fN6Osh29NKa97Ajv1Xkvy6kfvxw/6JNHJtrvbguYbb0xCLa/FEQ/3I39R1eX35ir80CwX4RBKfOjZbz6pkGMSl7FTYBfKX9rihHXLRY7Fvut8I9KyERtnLP8Wo/NWhOsOYjjqkl9fQCmnJk+e7qojHn8dRkn6W5XW/mDwde/ZTtQFYWNs23GuroBYLsyb1pR6Y29Wh0YS59PKlebm+1iMaQvf29ZQSNmTScIUFSk1v4i9ILGvWHQSCaSoRN4KlkXpNp+qR0oUoRd5KNTZ0=
+    secure: lthJe84JRd3i0NwwLlFs9lImDdvigHG4Vi+mnQgYGk8o88HjB2uUFi3VwAAbQoMTYbZCBQFWYqOerTl6weDqbMd07t7WgYYNVQSbVMeqexRcNWwqL9qirAMB3cG2zdxrKPmzrFzMvMX32zP9xJoWTP4sJYYfAvD0EY5wD21GkS6cCAvsz+PJuRyqG2Ede65nxueKDDEzhgnezmw7i0DuLMzc+TZzi5tpeaIuS7jZS/OyURvsBAxpV+NOJ8bHQI3KbqTFIZosD2pvGVY2j70Vj0nGkcnE5eMWvVXNn+NFvFvoF68Dxcdomxl1ET3B9kp9XbXXakuc0ah6rSifeqc5tNGdo0XK3+QwWyhy6ZuRPxUw1woLdiP/Y24E2Q4Ik2SbiF1O418pBuHALyiXd5wweNS4/Fi6/IyJoAF41BokUBD3xnx6Jk1OfdOjzn5Qyiz+2HFeXa/Ys1X2JM1pvdjtecWq9PHSPNvF5n5ROG+EphNL1FiCljAannMdauPFSLDNwc5DUL2C1QLWsVJkphH/p76ZYoAplfaJkvAxggkKolnheCQCWL/uHacfi3Xd2t8eQoSvs7RIlkQe4bkVhXXOEWYZAcP+6PG0QsIsq+8pedMCLzdaE+Axcwxfz/lSF3j78PA2+EqOlfFNs52XNurvnlAo//vboaAqQ6oLpTa1Ol8=
   file:
     - "./iso/brinkOS_$RELEASE_DATE.iso.part_01"
     - "./iso/brinkOS_$RELEASE_DATE.iso.part_02"
