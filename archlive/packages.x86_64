@@ -13,6 +13,7 @@ brinkOS-terminal
 brinkOS-code
 brinkOS-wire
 brinkOS-pamac
+brinkOS-vim-colors
 
 vlc
 virtualbox-guest-utils
