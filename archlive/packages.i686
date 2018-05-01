@@ -17,7 +17,11 @@ brinkOS-vim-colors
 brinkOS-tag-ag
 brinkOS-nexus
 brinkOS-nemo-compare
+brinkOS-simplenote
 
+openvpn
+dnscrypt-proxy
+mlocate
 nemo-preview
 emacs
 eog
