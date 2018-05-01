@@ -16,7 +16,18 @@ brinkOS-pamac
 brinkOS-vim-colors
 brinkOS-tag-ag
 brinkOS-nexus
+brinkOS-nemo-compare
 
+nemo-preview
+emacs
+eog
+nemo-seahorse
+nemo-share
+wireshark-gtk
+meld
+nemo-terminal
+readline
+nemo-fileroller
 the_silver_searcher
 vlc
 virtualbox-guest-utils
@@ -37,7 +48,6 @@ rust
 nodejs
 automake
 autoconf
-eog
 npm
 php
 tmux
