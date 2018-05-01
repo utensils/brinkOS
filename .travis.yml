@@ -8,7 +8,7 @@ script:
 - docker run -i -t --privileged -v `pwd`/iso:/iso --rm jamesbrink/brinkos
 - sudo chmod -R 777 ./iso
 - mv ./iso/*.iso ./iso/release.iso
-- cd ./iso/ && split -n 2 release.iso --numeric-suffixes=1 ./brinkOS_$RELEASE_DATE.iso.part_
+- cd ./iso/ && split -n 2 release.iso --numeric-suffixes=1 ./brinkOS_$(date +%Y.%m.%d).iso.part_
   && rm release.iso && cd ..
 - ls -lart ./iso/
 deploy:
