@@ -20,6 +20,12 @@ brinkOS-nemo-compare
 brinkOS-simplenote
 brinkOS-xplayer
 brinkOS-xplayer-plparser
+brinkOS-xed
+brinkOS-xviewer
+brinkOS-pix
+brinkOS-dropbox
+brinkOS-nemo-dropbox
+brinkOS-dropbox-cli
 
 gstreamer
 gst-libav
@@ -32,7 +38,6 @@ dnscrypt-proxy
 mlocate
 nemo-preview
 emacs
-eog
 nemo-seahorse
 nemo-share
 wireshark-gtk
