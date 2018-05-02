@@ -18,7 +18,15 @@ brinkOS-tag-ag
 brinkOS-nexus
 brinkOS-nemo-compare
 brinkOS-simplenote
+brinkOS-xplayer
+brinkOS-xplayer-plparser
 
+gstreamer
+gst-libav
+gst-plugins-base
+gst-plugins-good
+gst-plugins-ugly
+docker-compose
 openvpn
 dnscrypt-proxy
 mlocate
@@ -29,7 +37,6 @@ nemo-seahorse
 nemo-share
 wireshark-gtk
 meld
-nemo-terminal
 readline
 nemo-fileroller
 the_silver_searcher
