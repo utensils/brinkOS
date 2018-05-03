@@ -35,6 +35,7 @@ brinkOS-zfs-headers
 brinkOS-ipget
 brinkOS-hfsprogs
 brinkOS-oor
+brinkOS-networkmanager-ssh
 
 
 htop

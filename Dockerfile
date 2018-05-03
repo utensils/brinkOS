@@ -1,4 +1,4 @@
-FROM base/archlinux:2018.04.01
+FROM base/archlinux:2018.05.01
 
 # Build arguments.
 ARG VCS_REF
@@ -48,7 +48,7 @@ COPY ./docker-entrypoint.sh /build/docker-entrypoint.sh
 ENV GTK_THEME="brinkOS-Dark" \
     SHELL_THEME="brinkOS-Dark" \
     ICON_THEME="brinkOS" \
-    WALLPAPER="file:///usr/share/backgrounds/gnome/snow-white.jpg" \
+    WALLPAPER="file:///usr/share/backgrounds/gnome/mount-cook.jpg" \
     PACKAGE_PROXY=""
 
 # Set our entrypoint which kicks off our build.
