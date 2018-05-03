@@ -3,6 +3,8 @@ services: docker
 before_deploy:
 - export RELEASE_DATE=$(date +%Y.%m.%d)
 script:
+- docker build -t jamesbrink/brinkos-builder .
+- docker images
 - docker run -i -t --privileged -v `pwd`/iso:/iso --rm jamesbrink/brinkos-builder
 - sudo chmod -R 777 ./iso
 - mv ./iso/*.iso ./iso/release.iso
