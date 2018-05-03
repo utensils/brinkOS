@@ -4,6 +4,10 @@
 pacman-key --init
 pacman-key --populate
 
+mkdir -p /home/liveuser/Desktop/
+cp /usr/share/applications/brinkOS-Installer.desktop /home/liveuser/Desktop/brinkOS-Installer
+chown -R liveuser /home/liveuser/Desktop
+
 # Setup Plymouth
 cat <<-EOF > /etc/mkinitcpio-archiso.conf
 HOOKS="base udev plymouth memdisk archiso_shutdown archiso archiso_loop_mnt archiso_pxe_common archiso_pxe_nbd archiso_pxe_http archiso_pxe_nfs archiso_kms block pcmcia filesystems keyboard"
