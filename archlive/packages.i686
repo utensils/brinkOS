@@ -37,7 +37,14 @@ brinkOS-hfsprogs
 brinkOS-oor
 brinkOS-networkmanager-ssh
 brinkOS-assets
+brinkOS-libcgroup
 
+python2-boto3
+python2-pyopenssl
+python2-systemd
+cpulimit
+cgmanager
+filezilla
 aws-cli
 ansible
 virtualbox
