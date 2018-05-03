@@ -36,7 +36,11 @@ brinkOS-ipget
 brinkOS-hfsprogs
 brinkOS-oor
 brinkOS-networkmanager-ssh
+brinkOS-assets
 
+aws-cli
+ansible
+virtualbox
 powerline
 powerline-fonts
 inkscape
