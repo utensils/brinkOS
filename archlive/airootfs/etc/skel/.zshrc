@@ -11,4 +11,4 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-source /usr/share/zsh/site-contrib/powerline.zsh
+source /usr/lib/python3.6/site-packages/powerline/bindings/zsh/powerline.zsh

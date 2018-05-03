@@ -35,8 +35,12 @@ brinkOS-zfs-headers
 brinkOS-ipget
 brinkOS-hfsprogs
 brinkOS-oor
+brinkOS-networkmanager-ssh
 
-
+powerline
+powerline-fonts
+inkscape
+calibre
 htop
 librsvg
 gdb
