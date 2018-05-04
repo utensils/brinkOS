@@ -4,10 +4,6 @@
 pacman-key --init
 pacman-key --populate
 
-mkdir -p /home/liveuser/Desktop/
-cp /usr/share/applications/brinkOS-Installer.desktop /home/liveuser/Desktop/brinkOS-Installer
-chown -R liveuser /home/liveuser/Desktop
-
 # Setup Plymouth
 cat <<-EOF > /etc/mkinitcpio-archiso.conf
 HOOKS="base udev plymouth memdisk archiso_shutdown archiso archiso_loop_mnt archiso_pxe_common archiso_pxe_nbd archiso_pxe_http archiso_pxe_nfs archiso_kms block pcmcia filesystems keyboard"
@@ -64,6 +60,10 @@ sudo -u liveuser gsettings set org.cinnamon.desktop.wm.preferences theme "$GTK_T
 sudo -u liveuser gsettings set org.cinnamon.theme name "$SHELL_THEME"
 sudo -u liveuser gsettings set org.cinnamon.desktop.interface icon-theme "$ICON_THEME"
 sudo -u liveuser gsettings set org.cinnamon.desktop.background picture-uri "$WALLPAPER"
+
+# Copy installer icon to desktop
+sudo -u liveuser mkdir -p /home/liveuser/Desktop/
+sudo -u liveuser cp /usr/share/applications/brinkOS-Installer.desktop /home/liveuser/Desktop/brinkOS-Installer
 
 systemctl enable pacman-init.service choose-mirror.service
 # ln -s /usr/lib/systemd/system/gdm.service /build/archlive/airootfs/etc/systemd/system/display-manager.service
