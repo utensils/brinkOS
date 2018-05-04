@@ -63,7 +63,7 @@ sudo -u liveuser gsettings set org.cinnamon.desktop.background picture-uri "$WAL
 
 # Copy installer icon to desktop
 sudo -u liveuser mkdir -p /home/liveuser/Desktop/
-sudo -u liveuser cp /usr/share/applications/brinkOS-Installer.desktop /home/liveuser/Desktop/brinkOS-Installer
+sudo -u liveuser cp /usr/share/applications/brinkOS-Installer.desktop /home/liveuser/Desktop/brinkOS-Installer.desktop
 
 systemctl enable pacman-init.service choose-mirror.service
 # ln -s /usr/lib/systemd/system/gdm.service /build/archlive/airootfs/etc/systemd/system/display-manager.service
