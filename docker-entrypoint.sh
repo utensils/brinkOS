@@ -14,7 +14,8 @@ if [ "$#" -eq 0 ]; then
 	./build.sh -v -N brinkOS -o /iso &
 	build_pid=$!
 	keep_alive $build_pid
-	exit $?
+	chmod 777 /iso/*.iso
+	exit
 else
 	exec "$@"
 fi

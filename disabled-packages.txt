@@ -1,2 +1,12 @@
-nemo-terminal
-eog
+rtl-sdr
+gqrx
+qemu
+qemu-arch-extra
+qemu-block-gluster
+qemu-block-iscsi
+qemu-block-rbd
+virt-manager
+lxc
+arch-install-scripts 
+rkt
+sysdig

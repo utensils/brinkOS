@@ -39,6 +39,8 @@ brinkOS-networkmanager-ssh
 brinkOS-assets
 brinkOS-libcgroup
 
+
+kitty
 python2-boto3
 python2-pyopenssl
 python2-systemd

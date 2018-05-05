@@ -61,10 +61,6 @@ sudo -u liveuser gsettings set org.cinnamon.theme name "$SHELL_THEME"
 sudo -u liveuser gsettings set org.cinnamon.desktop.interface icon-theme "$ICON_THEME"
 sudo -u liveuser gsettings set org.cinnamon.desktop.background picture-uri "$WALLPAPER"
 
-# Copy installer icon to desktop
-sudo -u liveuser mkdir -p /home/liveuser/Desktop/
-sudo -u liveuser cp /usr/share/applications/brinkOS-Installer.desktop /home/liveuser/Desktop/brinkOS-Installer.desktop
-
 systemctl enable pacman-init.service choose-mirror.service
 # ln -s /usr/lib/systemd/system/gdm.service /build/archlive/airootfs/etc/systemd/system/display-manager.service
 # This throws out warnings but still works.
