@@ -49,7 +49,8 @@ ENV GTK_THEME="brinkOS-Dark" \
     SHELL_THEME="brinkOS-Dark" \
     ICON_THEME="brinkOS" \
     WALLPAPER="file:///usr/share/backgrounds/gnome/mount-cook.jpg" \
-    PACKAGE_PROXY=""
+    PACKAGE_PROXY="" \
+    NETINSTALL="true"
 
 # Set our entrypoint which kicks off our build.
 ENTRYPOINT [ "/build/docker-entrypoint.sh" ]

@@ -8,6 +8,11 @@ keep_alive(){
 	done
 }
 
+if [ "$NETINSTALL" == "true" ]; then
+	echo "Building Netinstall"
+	cp /build/archlive/packages.netinstall.x86_64 /build/archlive/packages.x86_64
+fi
+
 if [ "$#" -eq 0 ]; then
 	echo "Building brinkOS"
 	cd /build/archlive/ || exit

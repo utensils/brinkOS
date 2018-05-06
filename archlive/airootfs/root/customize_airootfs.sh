@@ -62,10 +62,10 @@ sudo -u liveuser gsettings set org.cinnamon.desktop.interface icon-theme "$ICON_
 sudo -u liveuser gsettings set org.cinnamon.desktop.background picture-uri "$WALLPAPER"
 
 systemctl enable pacman-init.service choose-mirror.service
-# ln -s /usr/lib/systemd/system/gdm.service /build/archlive/airootfs/etc/systemd/system/display-manager.service
+# ln -s /usr/lib/systemd/system/lightdm.service /build/archlive/airootfs/etc/systemd/system/display-manager.service
 # This throws out warnings but still works.
-# systemctl enable gdm
-systemctl enable gdm-plymouth.service
+# systemctl enable lightdm
+systemctl enable lightdm-plymouth.service
 systemctl enable graphical.target
 
 # Enable open-vm-tools

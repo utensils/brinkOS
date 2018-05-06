@@ -3,7 +3,6 @@ brinkOS-wallpapers
 brinkOS-theme
 brinkOS-installer
 brinkOS-plymouth
-brinkOS-gdm-plymouth
 brinkOS-slack
 brinkOS-google-chrome
 brinkOS-plymouth-theme
@@ -40,6 +39,10 @@ brinkOS-assets
 brinkOS-libcgroup
 
 
+
+lightdm 
+lightdm-gtk-greeter
+lightdm-gtk-greeter-settings
 kitty
 python2-boto3
 python2-pyopenssl

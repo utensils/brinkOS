@@ -7,9 +7,7 @@ script:
 - docker images
 - docker run -i -t --privileged -v `pwd`/iso:/iso --rm jamesbrink/brinkos-builder
 - sudo chmod -R 777 ./iso
-- mv ./iso/*.iso ./iso/release.iso
-- cd ./iso/ && split -n 2 release.iso --numeric-suffixes=1 ./brinkOS_$(date +%Y.%m.%d).iso.part_
-  && rm release.iso && cd ..
+- mv ./iso/*.iso ./iso/brinkOS_$(date +%Y.%m.%d).iso
 - ls -lart ./iso/
 deploy:
   provider: releases
@@ -18,8 +16,7 @@ deploy:
   api_key:
     secure: lthJe84JRd3i0NwwLlFs9lImDdvigHG4Vi+mnQgYGk8o88HjB2uUFi3VwAAbQoMTYbZCBQFWYqOerTl6weDqbMd07t7WgYYNVQSbVMeqexRcNWwqL9qirAMB3cG2zdxrKPmzrFzMvMX32zP9xJoWTP4sJYYfAvD0EY5wD21GkS6cCAvsz+PJuRyqG2Ede65nxueKDDEzhgnezmw7i0DuLMzc+TZzi5tpeaIuS7jZS/OyURvsBAxpV+NOJ8bHQI3KbqTFIZosD2pvGVY2j70Vj0nGkcnE5eMWvVXNn+NFvFvoF68Dxcdomxl1ET3B9kp9XbXXakuc0ah6rSifeqc5tNGdo0XK3+QwWyhy6ZuRPxUw1woLdiP/Y24E2Q4Ik2SbiF1O418pBuHALyiXd5wweNS4/Fi6/IyJoAF41BokUBD3xnx6Jk1OfdOjzn5Qyiz+2HFeXa/Ys1X2JM1pvdjtecWq9PHSPNvF5n5ROG+EphNL1FiCljAannMdauPFSLDNwc5DUL2C1QLWsVJkphH/p76ZYoAplfaJkvAxggkKolnheCQCWL/uHacfi3Xd2t8eQoSvs7RIlkQe4bkVhXXOEWYZAcP+6PG0QsIsq+8pedMCLzdaE+Axcwxfz/lSF3j78PA2+EqOlfFNs52XNurvnlAo//vboaAqQ6oLpTa1Ol8=
   file:
-    - "./iso/brinkOS_$RELEASE_DATE.iso.part_01"
-    - "./iso/brinkOS_$RELEASE_DATE.iso.part_02"
+    - "./iso/brinkOS_$RELEASE_DATE.iso"
   skip_cleanup: true
   on:
     repo: brinkOS/brinkOS
