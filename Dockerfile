@@ -48,7 +48,7 @@ COPY ./docker-entrypoint.sh /build/docker-entrypoint.sh
 ENV GTK_THEME="brinkOS-Dark" \
     SHELL_THEME="brinkOS-Dark" \
     ICON_THEME="brinkOS" \
-    WALLPAPER="file:///usr/share/backgrounds/gnome/mount-cook.jpg" \
+    WALLPAPER="file:///usr/share/backgrounds/gnome/mountain-top.jpg" \
     PACKAGE_PROXY="" \
     NETINSTALL="true"
 
