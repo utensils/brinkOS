@@ -1,4 +1,5 @@
 brinkOS-installer
+# Base packages
 alsa-utils
 b43-fwcutter
 base
@@ -47,8 +48,8 @@ mtools
 net-tools
 ntfs-3g
 ntp
-openssh
 open-vm-tools
+openssh
 os-prober
 pkgfile
 powerline
@@ -63,7 +64,16 @@ sudo
 tar
 tlp
 tmux
+ttf-arphic-uming
+ttf-baekmuk
+ttf-bitstream-vera
+ttf-dejavu
+ttf-droid
+ttf-freefont
+ttf-liberation
 usb_modeswitch
+virtualbox-guest-modules-arch
+virtualbox-guest-utils
 wget
 whois
 wireless_tools
@@ -80,12 +90,3 @@ xterm
 xz
 zd1211-firmware
 zsh
-virtualbox-guest-utils
-virtualbox-guest-modules-arch
-ttf-arphic-uming
-ttf-baekmuk
-ttf-bitstream-vera
-ttf-dejavu
-ttf-droid
-ttf-freefont
-ttf-liberation
