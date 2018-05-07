@@ -4,7 +4,9 @@ base
 bash-completion
 bind-tools
 brinkOS-assets
+brinkOS-google-chrome
 brinkOS-icons
+brinkOS-installer
 brinkOS-liquidprompt
 brinkOS-pamac
 brinkOS-plymouth
@@ -47,6 +49,7 @@ mtools
 net-tools
 ntfs-3g
 ntp
+open-vm-tools
 openssh
 os-prober
 pkgfile
@@ -88,5 +91,3 @@ xterm
 xz
 zd1211-firmware
 zsh
-open-vm-tools
-brinkOS-installer

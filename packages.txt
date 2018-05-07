@@ -4,6 +4,7 @@ base
 bash-completion
 bind-tools
 brinkOS-assets
+brinkOS-google-chrome
 brinkOS-icons
 brinkOS-installer
 brinkOS-liquidprompt
