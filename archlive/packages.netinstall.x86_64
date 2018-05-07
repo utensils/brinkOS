@@ -1,5 +1,3 @@
-brinkOS-installer
-# Base packages
 alsa-utils
 b43-fwcutter
 base
@@ -34,8 +32,9 @@ hunspell
 icu
 ipw2100-fw
 ipw2200-fw
+kitty
 libmtp
-lightdm 
+lightdm
 lightdm-gtk-greeter
 linux-firmware
 mesa
@@ -48,7 +47,6 @@ mtools
 net-tools
 ntfs-3g
 ntp
-open-vm-tools
 openssh
 os-prober
 pkgfile
