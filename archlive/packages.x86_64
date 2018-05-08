@@ -4,6 +4,7 @@ base
 bash-completion
 bind-tools
 brinkOS-assets
+brinkOS-cower
 brinkOS-icons
 brinkOS-installer
 brinkOS-liquidprompt
@@ -12,6 +13,7 @@ brinkOS-plymouth
 brinkOS-plymouth-theme
 brinkOS-terminal
 brinkOS-theme
+brinkOS-vim-dein
 brinkOS-wallpapers
 broadcom-wl-dkms
 cinnamon
@@ -46,6 +48,7 @@ mlocate
 modemmanager
 mtools
 net-tools
+networkmanager
 ntfs-3g
 ntp
 open-vm-tools
@@ -94,5 +97,3 @@ xterm
 xz
 zd1211-firmware
 zsh
-brinkOS-vim-dein
-brinkOS-cower

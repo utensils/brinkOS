@@ -68,6 +68,9 @@ systemctl enable pacman-init.service choose-mirror.service
 systemctl enable lightdm-plymouth.service
 systemctl enable graphical.target
 
+# Enable network manager
+systemctl enable NetworkManager
+
 # Enable open-vm-tools
 cat /proc/version > /etc/arch-release
 systemctl enable vboxservice.service
