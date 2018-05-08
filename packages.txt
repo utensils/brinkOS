@@ -75,6 +75,7 @@ ttf-liberation
 usb_modeswitch
 vim
 vim-plugins
+vim-taglist
 virtualbox-guest-modules-arch
 virtualbox-guest-utils
 wget
@@ -93,3 +94,5 @@ xterm
 xz
 zd1211-firmware
 zsh
+brinkOS-vim-dein
+brinkOS-cower
