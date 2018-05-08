@@ -3,11 +3,24 @@
 [![Build Status](https://travis-ci.org/brinkOS/brinkOS.svg?branch=master)](https://travis-ci.org/brinkOS/brinkOS)
 
 ## About
-Arch based Linux distribution for Engineers
+
+This is an expiramental distribution based off of Arch Linux. It is targeted for Developers/Engineers.
+Currently the only supported platform is **x86_64**
+
+
+Live ISO images are available under the releases section of this repo.
+
+
+## Goals
+
+* Provide a live image with easy to use installer.
+* Provide a beutiful and useful desktop environment.
+* Provide a set of useful packages out of the box for developers/engineers.
+* Provide a pre-built packages that may not be available in the offical repositories such as vscode.
 
 
 
-## Usage
+## Building
 The following commands all assume you have cloned this repo and it is your current working directory.
 
 Build the brinkOS build container.
