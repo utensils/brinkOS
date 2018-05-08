@@ -1,4 +1,5 @@
 alsa-utils
+arch-install-scripts 
 b43-fwcutter
 base
 bash-completion
