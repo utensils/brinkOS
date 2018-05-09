@@ -6,9 +6,11 @@ bash-completion
 bind-tools
 brinkOS-assets
 brinkOS-cower
+brinkOS-google-chrome
 brinkOS-icons
 brinkOS-installer
 brinkOS-liquidprompt
+brinkOS-mkinitcpio-openswap
 brinkOS-pamac
 brinkOS-plymouth
 brinkOS-plymouth-theme
@@ -16,7 +18,7 @@ brinkOS-terminal
 brinkOS-theme
 brinkOS-vim-dein
 brinkOS-wallpapers
-broadcom-wl
+broadcom-wl-dkms
 cinnamon
 crda
 docker
@@ -26,6 +28,7 @@ efitools
 exfat-utils
 fakeroot
 fuse-exfat
+gnome-keyring
 gnome-screenshot
 grub
 gtkmm3
@@ -41,7 +44,7 @@ libmtp
 lightdm
 lightdm-gtk-greeter
 linux-firmware
-mesa
+linux-headers
 mesa
 mesa-libgl
 mesa-vdpau
@@ -50,6 +53,8 @@ modemmanager
 mtools
 net-tools
 networkmanager
+networkmanager-openvpn
+networkmanager-pptp
 ntfs-3g
 ntp
 open-vm-tools

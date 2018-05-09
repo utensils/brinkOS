@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Ensure loopback dev nodes are created.
+losetup
 # Used to keep travis from timing out.
 keep_alive(){
 	while kill -0 $1 > /dev/null 2>&1; do
