@@ -7,11 +7,10 @@ script:
 - docker images
 - docker run -i -t --privileged -v `pwd`/iso:/iso --rm jamesbrink/brinkos-builder
 - sudo chmod -R 777 ./iso
-- mv ./iso/*.iso ./iso/brinkOS_$(date +%Y.%m.%d).iso
+- mv ./iso/*.iso ./iso/brinkOS_$RELEASE_DATE.iso
 - ls -lart ./iso/
 - cd ./iso/
-- echo $RELEASE_DATE
-- ../github-release.sh github_api_token=$github_api_token owner=brinkOS repo=brinkOS tag=$(date +%Y.%m.%d) filename=./brinkOS_$(date +%Y.%m.%d).iso
+- ../github-release.sh github_api_token=$github_api_token owner=brinkOS repo=brinkOS filename=./brinkOS_$(date +%Y.%m.%d).iso
 env:
   global:
     secure: m4khA8hr7w5Mx0Ej3cGbbBqyN3i0/HJfObYObc7aoCO3BFdhC+ERtIPl4ILwAZyoyY/6WhZTO1T+vl8T3YL/zJ2IRJpyeiCyQhm8S9MJ7yI/4KinEffU9jddD+BH5bbj7Xl/VPtGMlSHMrs8+VrMzOr5FbY8yRef3YTwzCETccg9V0AXX6ydiaPY7Xv3zHPsgABlPEJj+kFPt5vVLUMaHY4GibEWgEvxc3nTa6Gyl21FGjp0x78ajv01KwLUNRKYZs71+KwrRKF0O3rB2X9YQDNkqX/Zn+C0wtBwmJT/uHfcvQBJTrEpXfzxWJ/eTCKgq03KIz5EAA6HI02OnSG+TJUOzIMxDsnHIEI6cJwB/JHRG54fm5oF1v42waO4rcwGQBvT1eFBhPmYXVakIleYhSjwxqTJoz6YNHmrorjQNSYgALn3JJqeztr1aU323QYMoMgt8lJXOWMIT6QE1IodRtfPmw9NtSHGWASmkcG1d3ywsoI0Ulm5tXTh/pXtm7pQs13u2jI5X3SiyZ3Dg+nrgzuNod5DyOChrqmnKrC8IzNmo6APz+JDflvdujIK3cVQ2MFIpc+AipQRT1UkH2BHH2SRRkvLEe3ys8LV6gxrneIQ+cDX6uyX3Cxf1onI4yv9zSvb7zqPPEbC9SXlmQ6s7Iop5hyXygsEMz7B9+0TnfE=
