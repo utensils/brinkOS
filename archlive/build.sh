@@ -72,6 +72,7 @@ make_setup_mkinitcpio() {
     local _hook
     mkdir -p ${work_dir}/${arch}/airootfs/etc/initcpio/hooks
     mkdir -p ${work_dir}/${arch}/airootfs/etc/initcpio/install
+    mkdir -p ${work_dir}/${arch}/airootfs/etc/modprobe.d
     for _hook in archiso archiso_shutdown archiso_pxe_common archiso_pxe_nbd archiso_pxe_http archiso_pxe_nfs archiso_loop_mnt; do
         cp /usr/lib/initcpio/hooks/${_hook} ${work_dir}/${arch}/airootfs/etc/initcpio/hooks
         cp /usr/lib/initcpio/install/${_hook} ${work_dir}/${arch}/airootfs/etc/initcpio/install
@@ -80,12 +81,13 @@ make_setup_mkinitcpio() {
     cp /usr/lib/initcpio/install/archiso_kms ${work_dir}/${arch}/airootfs/etc/initcpio/install
     cp /usr/lib/initcpio/archiso_shutdown ${work_dir}/${arch}/airootfs/etc/initcpio
     cp ${script_path}/mkinitcpio.conf ${work_dir}/${arch}/airootfs/etc/mkinitcpio-archiso.conf
+    cp ${script_path}/airootfs/etc/modprobe.d/modprobe.conf ${work_dir}/${arch}/airootfs/etc/modprobe.d/modprobe.conf
     gnupg_fd=
     if [[ ${gpg_key} ]]; then
       gpg --export ${gpg_key} >${work_dir}/gpgkey
       exec 17<>${work_dir}/gpgkey
     fi
-    ARCHISO_GNUPG_FD=${gpg_key:+17} setarch ${arch} mkarchiso ${verbose} -w "${work_dir}/${arch}" -C "${work_dir}/pacman.conf" -D "${install_dir}" -r 'mkinitcpio -c /etc/mkinitcpio-archiso.conf -k /boot/vmlinuz-linux -g /boot/archiso.img' run
+    ARCHISO_GNUPG_FD=${gpg_key:+17} setarch ${arch} mkarchiso ${verbose} -w "${work_dir}/${arch}" -C "${work_dir}/pacman.conf" -D "${install_dir}" -r 'mkinitcpio -v -c /etc/mkinitcpio-archiso.conf -k /boot/vmlinuz-linux -g /boot/archiso.img' run
     if [[ ${gpg_key} ]]; then
       exec 17<&-
     fi
