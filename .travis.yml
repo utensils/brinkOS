@@ -1,6 +1,6 @@
 language: bash
 services: docker
-before_deploy:
+before_script:
 - export RELEASE_DATE=$(date +%Y.%m.%d)
 script:
 - docker build -t jamesbrink/brinkos-builder .
@@ -9,14 +9,9 @@ script:
 - sudo chmod -R 777 ./iso
 - mv ./iso/*.iso ./iso/brinkOS_$(date +%Y.%m.%d).iso
 - ls -lart ./iso/
-deploy:
-  provider: releases
-  prerelease: true
-  name: brinksOS_$RELEASE_DATE
-  api_key:
-    secure: lthJe84JRd3i0NwwLlFs9lImDdvigHG4Vi+mnQgYGk8o88HjB2uUFi3VwAAbQoMTYbZCBQFWYqOerTl6weDqbMd07t7WgYYNVQSbVMeqexRcNWwqL9qirAMB3cG2zdxrKPmzrFzMvMX32zP9xJoWTP4sJYYfAvD0EY5wD21GkS6cCAvsz+PJuRyqG2Ede65nxueKDDEzhgnezmw7i0DuLMzc+TZzi5tpeaIuS7jZS/OyURvsBAxpV+NOJ8bHQI3KbqTFIZosD2pvGVY2j70Vj0nGkcnE5eMWvVXNn+NFvFvoF68Dxcdomxl1ET3B9kp9XbXXakuc0ah6rSifeqc5tNGdo0XK3+QwWyhy6ZuRPxUw1woLdiP/Y24E2Q4Ik2SbiF1O418pBuHALyiXd5wweNS4/Fi6/IyJoAF41BokUBD3xnx6Jk1OfdOjzn5Qyiz+2HFeXa/Ys1X2JM1pvdjtecWq9PHSPNvF5n5ROG+EphNL1FiCljAannMdauPFSLDNwc5DUL2C1QLWsVJkphH/p76ZYoAplfaJkvAxggkKolnheCQCWL/uHacfi3Xd2t8eQoSvs7RIlkQe4bkVhXXOEWYZAcP+6PG0QsIsq+8pedMCLzdaE+Axcwxfz/lSF3j78PA2+EqOlfFNs52XNurvnlAo//vboaAqQ6oLpTa1Ol8=
-  file:
-    - "./iso/brinkOS_$RELEASE_DATE.iso"
-  skip_cleanup: true
-  on:
-    repo: brinkOS/brinkOS
+- cd ./iso/
+- echo $RELEASE_DATE
+- ../github-release.sh github_api_token=$github_api_token owner=brinkOS repo=brinkOS tag=$(date +%Y.%m.%d) filename=./brinkOS_$(date +%Y.%m.%d).iso
+env:
+  global:
+    secure: m4khA8hr7w5Mx0Ej3cGbbBqyN3i0/HJfObYObc7aoCO3BFdhC+ERtIPl4ILwAZyoyY/6WhZTO1T+vl8T3YL/zJ2IRJpyeiCyQhm8S9MJ7yI/4KinEffU9jddD+BH5bbj7Xl/VPtGMlSHMrs8+VrMzOr5FbY8yRef3YTwzCETccg9V0AXX6ydiaPY7Xv3zHPsgABlPEJj+kFPt5vVLUMaHY4GibEWgEvxc3nTa6Gyl21FGjp0x78ajv01KwLUNRKYZs71+KwrRKF0O3rB2X9YQDNkqX/Zn+C0wtBwmJT/uHfcvQBJTrEpXfzxWJ/eTCKgq03KIz5EAA6HI02OnSG+TJUOzIMxDsnHIEI6cJwB/JHRG54fm5oF1v42waO4rcwGQBvT1eFBhPmYXVakIleYhSjwxqTJoz6YNHmrorjQNSYgALn3JJqeztr1aU323QYMoMgt8lJXOWMIT6QE1IodRtfPmw9NtSHGWASmkcG1d3ywsoI0Ulm5tXTh/pXtm7pQs13u2jI5X3SiyZ3Dg+nrgzuNod5DyOChrqmnKrC8IzNmo6APz+JDflvdujIK3cVQ2MFIpc+AipQRT1UkH2BHH2SRRkvLEe3ys8LV6gxrneIQ+cDX6uyX3Cxf1onI4yv9zSvb7zqPPEbC9SXlmQ6s7Iop5hyXygsEMz7B9+0TnfE=
