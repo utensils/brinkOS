@@ -9,8 +9,10 @@ script:
 - sudo chmod -R 777 ./iso
 - mv ./iso/*.iso ./iso/brinkOS_$RELEASE_DATE.iso
 - ls -lart ./iso/
-- cd ./iso/
-- ../github-release.sh github_api_token=$github_api_token owner=brinkOS repo=brinkOS tag=2018.05 filename=./brinkOS_$(date +%Y.%m.%d).iso
-env:
-  global:
-    secure: m4khA8hr7w5Mx0Ej3cGbbBqyN3i0/HJfObYObc7aoCO3BFdhC+ERtIPl4ILwAZyoyY/6WhZTO1T+vl8T3YL/zJ2IRJpyeiCyQhm8S9MJ7yI/4KinEffU9jddD+BH5bbj7Xl/VPtGMlSHMrs8+VrMzOr5FbY8yRef3YTwzCETccg9V0AXX6ydiaPY7Xv3zHPsgABlPEJj+kFPt5vVLUMaHY4GibEWgEvxc3nTa6Gyl21FGjp0x78ajv01KwLUNRKYZs71+KwrRKF0O3rB2X9YQDNkqX/Zn+C0wtBwmJT/uHfcvQBJTrEpXfzxWJ/eTCKgq03KIz5EAA6HI02OnSG+TJUOzIMxDsnHIEI6cJwB/JHRG54fm5oF1v42waO4rcwGQBvT1eFBhPmYXVakIleYhSjwxqTJoz6YNHmrorjQNSYgALn3JJqeztr1aU323QYMoMgt8lJXOWMIT6QE1IodRtfPmw9NtSHGWASmkcG1d3ywsoI0Ulm5tXTh/pXtm7pQs13u2jI5X3SiyZ3Dg+nrgzuNod5DyOChrqmnKrC8IzNmo6APz+JDflvdujIK3cVQ2MFIpc+AipQRT1UkH2BHH2SRRkvLEe3ys8LV6gxrneIQ+cDX6uyX3Cxf1onI4yv9zSvb7zqPPEbC9SXlmQ6s7Iop5hyXygsEMz7B9+0TnfE=
+deploy:
+  provider: releases
+  api_key:
+    secure: zDP5WAkti7gtOUnsk1l11lqmmPnL/PQtgB9040ZysBV8Z88H229KygRK2qEaaqewYV14Q6T/Wbx4QtAkSpZFyOkN4EdyrE+OpvrrKxrEo+olbSIs2EHQtW2Zrjp7HvLPuqO9UhV6I+iFO9G7xyyqKrGRdAq/4cFhtzfg5uqj0k0lB/uDFEQc+taPRUQPpThoichffTwLQI3IbqPPDwfcBKbOIw2IrWNNilj5NCClIEeSBoaYSpv4t7g1GkjzudNe3XuCQ5BsDw8IcaJKzW2CmXtrhukWCHmq70nORBH6XsRF+oZwsth+NYb54fdorN8SI98RPK9dlbNp2aoxP2J79vXVaqm3RO2BOxsd7VpnTVTaX2GPLYSKfqiRTvlJbPo85wgMJUNq7NfdZ2X5hIC7LHqcULrvPTifP8kkZwEcPgJcMfJxtvV4foP4lkxDNUd54kGTsbWp0cVfZ91Itw3Urm4id6TG22nR1CvgML1N8auLW9/KiohtfNIFLNinNlRykxAqSiXQJBI7KVmkli0ItZkgU5yFw/XXuuUuljHG1YfGmj7Ia+1AaVWT7DuLVvaTQpr/GOjaDwSlc9iPJwJHbA2684PyTGi4R+CYQdUwLLHLsc7QG8ylLdtnVBKa0GjNe5kFy0oOMVKQCa8Bsd7MOzqirHzb4IcAg8RB8BUt8f0=
+  file: ./iso/brinkOS_$RELEASE_DATE.iso
+  on:
+    repo: brinkOS/brinkOS
