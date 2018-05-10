@@ -16,6 +16,7 @@ brinkOS-mkinitcpio-openswap
 brinkOS-pamac
 brinkOS-plymouth
 brinkOS-plymouth-theme
+brinkOS-snapd
 brinkOS-terminal
 brinkOS-theme
 brinkOS-vim-dein
