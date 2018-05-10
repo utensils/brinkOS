@@ -2,12 +2,10 @@ version: 2
 jobs:
   build:
     docker:
-      - image: debian:stretch
+      - image: buildpack-deps:trusty
     steps:
+      - setup_remote_docker:
+            docker_layer_caching: true
       - checkout
-      - run:
-          name: Greeting
-          command: echo Hello, world.
-      - run:
-          name: Print the Current Time
-          command: date
+      - run: |
+            docker build -t brinkOS/brinkOS .
