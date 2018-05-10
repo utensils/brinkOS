@@ -16,7 +16,8 @@ jobs:
       - setup_remote_docker:
             docker_layer_caching: true
       - run: |
-            docker build -t brinkos/brinkos .
+            # docker build -t brinkos/brinkos .
+            docker pull brinkos/brinkos
       - run: |
             # starting container with our application
             # make sure you're not using `--rm` option otherwise container will be killed after finish
@@ -24,5 +25,6 @@ jobs:
 
       - run: |
             # once application container finishes we can copy artifacts directly from it
-            docker cp brinkos-build:/iso/*.iso ./
+            # RELEASE_DATE=$(date +%Y.%m.%d)
+            docker cp brinkos-build:/iso/brinkOS-$(date +%Y.%m.%d)-x86_64.iso ./
             ls -lart
