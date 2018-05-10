@@ -20,7 +20,7 @@ jobs:
       - run: |
             # starting container with our application
             # make sure you're not using `--rm` option otherwise container will be killed after finish
-            docker run --name brinkos-build brinkos/brinkos
+            docker run --privileged --name brinkos-build brinkos/brinkos
 
       - run: |
             # once application container finishes we can copy artifacts directly from it
