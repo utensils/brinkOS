@@ -4,8 +4,25 @@ jobs:
     docker:
       - image: buildpack-deps:trusty
     steps:
+      - checkout
+      - run:
+          name: Install Docker client
+          command: |
+            set -x
+            VER="17.03.0-ce"
+            curl -L -o /tmp/docker-$VER.tgz https://download.docker.com/linux/static/stable/x86_64/docker-$VER.tgz
+            tar -xz -C /tmp -f /tmp/docker-$VER.tgz
+            mv /tmp/docker/* /usr/bin
       - setup_remote_docker:
             docker_layer_caching: true
-      - checkout
       - run: |
-            docker build -t brinkOS/brinkOS .
+            docker build -t brinkos/brinkos .
+      - run: |
+            # starting container with our application
+            # make sure you're not using `--rm` option otherwise container will be killed after finish
+            docker run --name brinkos-build brinkos/brinkos
+
+      - run: |
+            # once application container finishes we can copy artifacts directly from it
+            docker cp brinkos-build:/iso/*.iso ./
+            ls -lart
