@@ -42,7 +42,7 @@ sed -i 's/#\(HandleHibernateKey=\)hibernate/\1ignore/' /etc/systemd/logind.conf
 sed -i 's/#\(HandleLidSwitch=\)suspend/\1ignore/' /etc/systemd/logind.conf
 
 groupadd liveuser
-useradd -g liveuser -d /home/liveuser -m -s /bin/bash  -G "adm,audio,floppy,log,network,rfkill,scanner,storage,optical,power,wheel,docker" liveuser
+useradd -g liveuser -d /home/liveuser -m -s /bin/zsh  -G "adm,audio,floppy,log,network,rfkill,scanner,storage,optical,power,wheel,docker" liveuser
 passwd -d liveuser
 echo "liveuser ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers;
 
