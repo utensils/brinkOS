@@ -17,3 +17,4 @@ deploy:
   skip_cleanup: true
   on:
     repo: brinkOS/brinkOS
+    tags: true
