@@ -9,6 +9,7 @@ brinkOS-antigen
 brinkOS-assets
 brinkOS-cower
 brinkOS-google-chrome
+brinkOS-hfsprogs
 brinkOS-icons
 brinkOS-installer
 brinkOS-lha
@@ -24,6 +25,7 @@ brinkOS-vim-dein
 brinkOS-wallpapers
 brinkOS-wd719x-firmware
 broadcom-wl-dkms
+btrfs-progs
 cinnamon
 crda
 docker
@@ -31,7 +33,9 @@ docker-compose
 dosfstools
 efitools
 exfat-utils
+f2fs-tools
 fakeroot
+fsarchiver
 fuse-exfat
 gnome-keyring
 gnome-screenshot
@@ -61,6 +65,8 @@ net-tools
 networkmanager
 networkmanager-openvpn
 networkmanager-pptp
+nfs-utils
+nilfs-utils
 ntfs-3g
 ntp
 open-vm-tools
