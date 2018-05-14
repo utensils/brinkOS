@@ -28,6 +28,7 @@ broadcom-wl-dkms
 btrfs-progs
 cinnamon
 crda
+cronie
 docker
 docker-compose
 dosfstools
