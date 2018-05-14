@@ -1,8 +1,7 @@
-# brinkOS
+# brinkOS ![logo](logo_small.png)
 
 [![Build Status](https://travis-ci.org/brinkOS/brinkOS.svg?branch=master)](https://travis-ci.org/brinkOS/brinkOS)
 
-![logo](icon.png)
 ## About
 
 This is an expiramental distribution based off of Arch Linux. It is targeted for Developers/Engineers.
