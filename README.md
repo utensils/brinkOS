@@ -4,7 +4,7 @@
 
 ## About
 
-This is an expiramental distribution based off of Arch Linux. It is targeted for Developers/Engineers.
+This is an experimental distribution based off of Arch Linux. It is targeted for Developers/Engineers.
 Currently the only supported platform is **x86_64**
 
 
@@ -14,9 +14,9 @@ Live ISO images are available under the releases section of this repo.
 ## Goals
 
 * Provide a live image with easy to use installer.
-* Provide a beutiful and useful desktop environment.
+* Provide a beautiful and useful desktop environment.
 * Provide a set of useful packages out of the box for developers/engineers.
-* Provide a pre-built packages that may not be available in the offical repositories such as vscode.
+* Provide a pre-built packages that may not be available in the official repositories such as vscode.
 
 
 
@@ -29,13 +29,13 @@ Build the brinkOS build container.
 docker build -t brinkos .
 ```
 
-build brinkOS, this will run and place the iso image in `./iso/`
+Build brinkOS, this will run and place the iso image in `./iso/`
 
 ```shell
 $ docker run -i -t --privileged -v `pwd`/iso:/iso --rm brinkos
 ```
 
-or to optionally interact with the build process
+To optionally interact with the build process
 ```shell
 $ docker run -i -t --privileged -v `pwd`/iso:/iso --rm brinkos bash
 [root@dc1f5b1f676f /]# cd /build/archlive/
