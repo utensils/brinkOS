@@ -11,6 +11,13 @@ Currently the only supported platform is **x86_64**
 Live ISO images are available under the releases section of this repo.
 
 
+### Cinnamon Desktop  
+![desktop](images/desktop.png)
+
+### Installer  
+![installer](images/installer.png)
+
+
 ## Goals
 
 * Provide a live image with easy to use installer.
