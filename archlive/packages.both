@@ -74,6 +74,7 @@ ntp
 open-vm-tools
 openssh
 os-prober
+p7zip
 pkgfile
 powerline
 powerline-fonts
