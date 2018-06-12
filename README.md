@@ -8,7 +8,7 @@ This is an experimental distribution based off of Arch Linux. It is targeted for
 Currently the only supported platform is **x86_64**
 
 
-Live ISO images are available under the releases section of this repo.
+Live ISO images are available under the [releases](https://github.com/brinkOS/brinkOS/releases) section of this repo.
 
 
 ### Cinnamon Desktop  
