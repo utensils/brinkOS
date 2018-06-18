@@ -57,3 +57,16 @@ $ docker run -i -t --privileged -v `pwd`/iso:/iso --rm brinkos bash
 [root@dc1f5b1f676f /]# cd /build/archlive/
 [root@dc1f5b1f676f archlive]# ./build.sh -v
 ```
+
+## License
+
+MIT
+Docker container and entrypoint scripts are MIT licensed.
+
+pacstrap.sh and arch install scripts are GPLv2 and all credit goes to original developers and maintainers.
+see license directory. upstream URL [https://git.archlinux.org/arch-install-scripts.git/](https://git.archlinux.org/arch-install-scripts.git/)  
+
+Arch linux is licensed under GLPv2, please refer to the arch linux website for additional information.
+[https://www.archlinux.org/](https://www.archlinux.org/)  
+
+
