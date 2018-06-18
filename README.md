@@ -60,8 +60,7 @@ $ docker run -i -t --privileged -v `pwd`/iso:/iso --rm brinkos bash
 
 ## License
 
-MIT
-Docker container and entrypoint scripts are MIT licensed.
+GPLv2
 
 pacstrap.sh and arch install scripts are GPLv2 and all credit goes to original developers and maintainers.
 see license directory. upstream URL [https://git.archlinux.org/arch-install-scripts.git/](https://git.archlinux.org/arch-install-scripts.git/)  
