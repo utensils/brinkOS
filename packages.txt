@@ -29,6 +29,7 @@ btrfs-progs
 cinnamon
 crda
 cronie
+dhclient
 docker
 docker-compose
 dosfstools
