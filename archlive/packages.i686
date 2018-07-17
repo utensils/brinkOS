@@ -13,8 +13,10 @@ brinkOS-hfsprogs
 brinkOS-icons
 brinkOS-installer
 brinkOS-lha
+brinkOS-libreswan
 brinkOS-liquidprompt
 brinkOS-mkinitcpio-openswap
+brinkOS-networkmanager-l2tp
 brinkOS-pamac
 brinkOS-plymouth
 brinkOS-plymouth-theme
