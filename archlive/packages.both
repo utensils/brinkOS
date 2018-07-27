@@ -29,6 +29,7 @@ brinkOS-wd719x-firmware
 broadcom-wl-dkms
 btrfs-progs
 cinnamon
+cmake
 crda
 cronie
 dhclient
