@@ -24,14 +24,14 @@ RUN set -xe; \
 
 # Install all needed deps
 RUN set -xe; \
-    pacman -Syu --noconfirm; \
+    pacman -Syyu --noconfirm; \
     pacman -S base base-devel cmake automake autoconf wget vim archiso openssh git nginx --noconfirm;
 
 # Improve build time by caching packages from image.
 COPY ./pacman.conf /etc/pacman.conf
 COPY ./packages.txt /packages.txt
 COPY ./pacstrap.sh /bin/pacstrap
-RUN pacman --noconfirm -Syw $(</packages.txt)
+RUN pacman --noconfirm -Syyw $(</packages.txt)
 
 # If building on a debian host, dev/shm points to /run/shm
 # and will fail without this directory.
