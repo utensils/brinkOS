@@ -1,10 +1,10 @@
-cmake
 alsa-utils
 arch-install-scripts 
 b43-fwcutter
 base
 bash-completion
 bind-tools
+blueberry
 brinkOS-aic94xx-firmware
 brinkOS-antigen
 brinkOS-assets
@@ -30,6 +30,7 @@ brinkOS-wd719x-firmware
 broadcom-wl-dkms
 btrfs-progs
 cinnamon
+cmake
 crda
 cronie
 dhclient
@@ -42,6 +43,7 @@ f2fs-tools
 fakeroot
 fsarchiver
 fuse-exfat
+gnome-calendar
 gnome-keyring
 gnome-screenshot
 gparted
@@ -61,6 +63,7 @@ lightdm
 lightdm-gtk-greeter
 linux-firmware
 linux-headers
+lsof
 mesa
 mesa-libgl
 mesa-vdpau
@@ -85,6 +88,7 @@ powerline-fonts
 readline
 refind-efi
 rfkill
+rsync
 shellcheck
 smartmontools
 splix

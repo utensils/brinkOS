@@ -78,8 +78,11 @@ systemctl enable vboxservice.service
 systemctl enable vmtoolsd.service
 systemctl enable vmware-vmblock-fuse.service
 
+# Enable bluetooth
+systemctl enable bluetooth.service
+
 # Enable docker
-# systemctl enable docker
+systemctl enable docker
 
 # Enable cron
 systemctl enable cronie.service
