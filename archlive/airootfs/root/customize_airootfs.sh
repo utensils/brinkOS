@@ -4,18 +4,6 @@
 pacman-key --init
 pacman-key --populate
 
-# Setup Plymouth
-# cat <<-EOF > /etc/mkinitcpio-archiso.conf
-# MODULES="vsock vmw_vsock_vmci_transport vmw_balloon vmw_vmci vmwgfx nouveau radeon amdgpu i915"
-# HOOKS="base udev plymouth memdisk archiso_shutdown archiso archiso_loop_mnt archiso_pxe_common archiso_pxe_nbd archiso_pxe_http archiso_pxe_nfs archiso_kms block pcmcia filesystems keyboard"
-# COMPRESSION="xz"
-# EOF
-
-# cat <<-EOF > /etc/mkinitcpio.conf
-# HOOKS=(base udev plymouth autodetect modconf block filesystems keyboard fsck)
-# EOF
-
-
 # Attempt to work around build failure on debian hosts.
 mkdir -p /build/archiso/work/x86_64/airootfs/run/shm
 mkdir -p /build/archiso/work/x86_64/airootfs/var/run/shm
