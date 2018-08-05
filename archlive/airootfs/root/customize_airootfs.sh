@@ -81,6 +81,9 @@ systemctl enable vmware-vmblock-fuse.service
 # Enable bluetooth
 systemctl enable bluetooth.service
 
+# Enable ntpd
+systemctl enable ntpd.service
+
 # Enable docker
 systemctl enable docker
 
