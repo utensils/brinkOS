@@ -5,6 +5,7 @@ before_script:
 script:
 - docker build --no-cache --pull -t jamesbrink/brinkos-builder .
 - docker images
+- sudo losetup -f
 - docker run -i -t --privileged -v `pwd`/iso:/iso --rm jamesbrink/brinkos-builder
 - sudo chmod -R 777 ./iso
 - mv ./iso/*.iso ./iso/brinkOS_$RELEASE_DATE.iso
