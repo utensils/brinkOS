@@ -87,6 +87,7 @@ p7zip
 pkgfile
 powerline
 powerline-fonts
+python-powerline
 readline
 refind-efi
 rfkill
