@@ -22,8 +22,6 @@ Live ISO images are available under the [releases](https://github.com/brinkOS/br
 
 This is an ongoing project, there are plenty of issues to be addressed. Most of the pre-build packages found in the brinkOS repository have been forked from AUR builds. I need to get these builds setup to always be up to date and synced.  
 
-There is an issue when installing the OS with an encrypted root file system that needs to be sorted out.
-
 This distro is good if you are looking for an arch based system with a desktop and installer ready to go. It was initially inspired from the now defunct ApricityOS.  
 
 
