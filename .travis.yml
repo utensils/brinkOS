@@ -3,10 +3,10 @@ services: docker
 before_script:
 - export RELEASE_DATE=$(date +%Y.%m.%d)
 script:
-- docker build --no-cache --pull -t jamesbrink/brinkos-builder .
+- docker build --no-cache --pull -t brinkos/iso-builder .
 - docker images
 - sudo losetup -f
-- docker run -i -t --privileged -v `pwd`/iso:/iso --rm jamesbrink/brinkos-builder
+- docker run -i -t --privileged -v `pwd`/iso:/iso --rm brinkos/iso-builder
 - sudo chmod -R 777 ./iso
 - mv ./iso/*.iso ./iso/brinkOS_$RELEASE_DATE.iso
 - ls -lart ./iso/

@@ -3,7 +3,7 @@ FROM base/archlinux:latest
 # Build arguments.
 ARG VCS_REF
 ARG BUILD_DATE
-ARG BRINKOS_VERSION="2018.07.15"
+ARG BRINKOS_VERSION="2018.09.15"
 
 # Labels / Metadata.
 LABEL maintainer="James Brink, brink.james@gmail.com" \
