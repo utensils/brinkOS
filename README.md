@@ -1,6 +1,7 @@
 # brinkOS ![logo](logo_small.png)
 
-[![Build Status](https://travis-ci.org/brinkOS/brinkOS.svg?branch=master)](https://travis-ci.org/brinkOS/brinkOS)
+**THIS PROJECT IS CURRENTLY DEFUNCT BUT WILL RETURN SOON**  
+*Existing ISO images will still work and install, but `brinkOS` packages are no longer maintained.*  
 
 ## About
 
